@@ -1,0 +1,117 @@
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #009688;
+  display: flex;
+  align-items: center;
+}
+
+.navbarWrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.logo {
+  color: white;
+  display: flex;
+  flex: 2;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  flex: 7;
+}
+
+.navLinkItem {
+  display: flex;
+  flex: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLinkItem > li {
+  list-style: none;
+  display: flex;
+  margin: 0 5px;
+}
+
+.navLinkItem a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.searchContainer {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hemburger {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.hemburgerIcon {
+  background-color: white;
+  padding: 5px 7px;
+  font-size: 20px;
+  border-radius: 2px;
+  color: #004f47;
+  cursor: pointer;
+}
+
+.menuBox {
+  width: 35%;
+  height: 0vh;
+  position: absolute;
+  top: 50px;
+  background-color: #009688;
+  right: 0;
+  transition: height 0.25s ease-in;
+}
+
+.menuBox.menuBoxShow {
+  height: 80vh;
+  transition: height 0.25s ease-in;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    color: white;
+    display: flex;
+    flex: 0.5;
+  }
+
+  .logo > h1 {
+    font-size: 15px;
+  }
+
+  .searchContainer {
+    flex: 1.5;
+  }
+
+  .navLinkItem {
+    display: none;
+  }
+
+  .hemburgerIcon {
+    background-color: white;
+    padding: 3px 5px;
+    font-size: 15px;
+  }
+
+  .menuBox {
+    width: 50%;
+  }
+
+  .menuBox.menuBoxShow {
+    height: 60vh;
+  }
+}

@@ -1,0 +1,41 @@
+.searchForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  background-color: white;
+  padding: 5px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.search {
+  padding: 5px 10px;
+  border: none;
+  width: 360px;
+}
+
+.searchForm > input:focus {
+  outline: none;
+}
+
+.searchBtn {
+  cursor: pointer;
+  color: #005950;
+  font-weight: 500;
+}
+
+.searchAnimation {
+  transition: width 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .searchBtn {
+    font-size: 10px;
+  }
+
+  .search {
+    font-size: 10px;
+    width: auto;
+  }
+}
