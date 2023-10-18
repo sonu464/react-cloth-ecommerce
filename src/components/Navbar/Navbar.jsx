@@ -7,7 +7,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar(props) {
   const [showLinkBox, setShowLinkBox] = useState(true);
-  const [showMenuBox, setShowMenuBox] = useState(false);
+  const [showMenuBox, setShowMenuBox] = useState(true);
 
   const receiveDataFromChild = (data) => {
     if (data) {
