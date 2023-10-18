@@ -6,7 +6,7 @@ function Cart() {
     <div className={classes.cartWrapper}>
       <div className={classes.cartEmpty}>
         <div className={classes.cartImg}>
-          <img src="/src/assets/cart.png" alt="Cart Is Empty" />
+          <img src="/public/cart.png" alt="Cart Is Empty" />
         </div>
         <div className={classes.cartText}>
           <h1>Your cart is empty!</h1>
