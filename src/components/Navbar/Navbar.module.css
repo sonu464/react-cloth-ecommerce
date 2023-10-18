@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  height: 50px;
+  height: 10vh;
   background-color: #009688;
   display: flex;
   align-items: center;
@@ -23,11 +23,13 @@
   display: flex;
   align-items: center;
   flex: 7;
+  gap: 5%;
+  justify-content: flex-end;
 }
 
 .navLinkItem {
   display: flex;
-  flex: 2;
+  /* flex: 2; */
   align-items: center;
   justify-content: center;
 }
@@ -45,7 +47,7 @@
 }
 
 .searchContainer {
-  flex: 2;
+  /* flex: 2; */
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -71,15 +73,27 @@
   width: 35%;
   height: 0vh;
   position: absolute;
-  top: 50px;
+  top: 10%;
   background-color: #009688;
   right: 0;
   transition: height 0.25s ease-in;
+  z-index: 999;
+  display: none;
 }
 
 .menuBox.menuBoxShow {
+  display: block;
   height: 80vh;
   transition: height 0.25s ease-in;
+}
+
+.cart {
+  color: white;
+  cursor: pointer;
+}
+
+.cart:active {
+  scale: 0.9;
 }
 
 @media (max-width: 600px) {
@@ -94,7 +108,7 @@
   }
 
   .searchContainer {
-    flex: 1.5;
+    /* flex: 1.5; */
   }
 
   .navLinkItem {
@@ -113,5 +127,27 @@
 
   .menuBox.menuBoxShow {
     height: 60vh;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 3000px) {
+  .navbarWrapper {
+    padding: 10px 25px;
+  }
+
+  .logo h1 {
+    font-size: 30px;
+  }
+
+  .navLinkItem a {
+    font-size: 20px;
+  }
+
+  .cart {
+    font-size: 25px;
+  }
+
+  .hemburger {
+    font-size: 30px;
   }
 }

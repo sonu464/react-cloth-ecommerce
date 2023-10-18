@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Navbar.module.css";
 import SearchItem from "./SearchItem";
 import MenuBar from "./MenuBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar(props) {
   const [showLinkBox, setShowLinkBox] = useState(true);
   const [showMenuBox, setShowMenuBox] = useState(true);
+  const [showCart, setShowCart] = useState(false);
+
+  useEffect(() => {
+    props.cartValue(showCart);
+  }, [showCart]);
 
   const receiveDataFromChild = (data) => {
     if (data) {
@@ -19,6 +25,10 @@ function Navbar(props) {
 
   const hemburgerHandler = () => {
     setShowMenuBox((prevValue) => !prevValue);
+  };
+
+  const cartHandler = () => {
+    setShowCart((prevValue) => !prevValue);
   };
 
   const menuClasses = showMenuBox
@@ -47,6 +57,13 @@ function Navbar(props) {
         </div>
         <div className={classes.navLinks}>
           {showLinkBox && navLinkData}
+          <div className={classes.cartContainer}>
+            <FontAwesomeIcon
+              icon={faCartShopping}
+              className={classes.cart}
+              onClick={cartHandler}
+            />
+          </div>
           <div className={classes.searchContainer}>
             <SearchItem sendDataToParent={receiveDataFromChild} />
           </div>
@@ -59,6 +76,7 @@ function Navbar(props) {
           />
         </div>
       </div>
+
       <div className={menuClasses}>
         <MenuBar />
       </div>
