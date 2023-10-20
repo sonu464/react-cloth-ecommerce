@@ -101,6 +101,10 @@
 }
 
 @media (max-width: 600px) {
+  .navbar {
+    height: 7vh;
+  }
+
   .logo {
     color: white;
     display: flex;

@@ -30,19 +30,19 @@ function Home() {
           <div className={classes.homeProduct}>
             <h1>Starting ₹349 | Bestselling shoes</h1>
             <div className={classes.productImg}>
-              <img src="/public/product1.jpg" alt="" />
+              <img src="/product1.jpg" alt="" />
             </div>
           </div>
           <div className={classes.homeProduct}>
             <h1>Starting ₹349 | Bestselling shoes</h1>
             <div className={classes.productImg}>
-              <img src="/public/product1.jpg" alt="" />
+              <img src="/product1.jpg" alt="" />
             </div>
           </div>
           <div className={classes.homeProduct}>
             <h1>Starting ₹349 | Bestselling shoes</h1>
             <div className={classes.productImg}>
-              <img src="/public/product1.jpg" alt="" />
+              <img src="/product1.jpg" alt="" />
             </div>
           </div>
         </div>
