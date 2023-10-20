@@ -72,6 +72,10 @@
     display: flex;
   }
 
+  .homeItem {
+    margin-top: 10%;
+  }
+
   .homeItem h1 {
     font-size: 34px;
   }
