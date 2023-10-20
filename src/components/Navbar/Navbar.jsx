@@ -38,13 +38,13 @@ function Navbar(props) {
   const navLinkData = (
     <div className={classes.navLinkItem}>
       <li>
-        <a href="">Home</a>
+        <a href="">Location</a>
       </li>
+      {/* <li>
+        <a href=""></a>
+      </li> */}
       <li>
-        <a href="">About</a>
-      </li>
-      <li>
-        <a href="">Contact</a>
+        <a href="">Sign</a>
       </li>
     </div>
   );

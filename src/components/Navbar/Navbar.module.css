@@ -1,9 +1,13 @@
 .navbar {
   width: 100%;
   height: 10vh;
-  background-color: #009688;
+  /* background-color: #009688; */
+  background-color: #d9d9d9;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbarWrapper {
@@ -65,16 +69,16 @@
   padding: 5px 7px;
   font-size: 20px;
   border-radius: 2px;
-  color: #004f47;
+  color: black;
   cursor: pointer;
 }
 
 .menuBox {
   width: 35%;
   height: 0vh;
-  position: absolute;
+  position: fixed;
   top: 10%;
-  background-color: #009688;
+  background-color: #c1c1c1;
   right: 0;
   transition: height 0.25s ease-in;
   z-index: 999;

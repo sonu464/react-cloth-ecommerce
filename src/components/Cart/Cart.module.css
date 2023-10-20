@@ -3,6 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 10%;
+  background-color: white;
 }
 
 .cartEmpty {
@@ -48,7 +51,7 @@
 
 .cartBtnShopAgain h1 {
   padding: 5px 20px;
-  background-color: #00554d;
+  background-color: red;
   color: white;
   border-radius: 2px;
   cursor: pointer;
@@ -59,17 +62,9 @@
 }
 
 @media (min-width: 1000px) and (max-width: 3000px) {
-  .cartText h1 {
-    font-size: 45px;
-  }
-
   .cartImg img {
-    height: 500px;
-  }
-
-  .cartBtnShopAgain h1 {
-    padding: 10px 25px;
-    font-size: 30px;
+    height: 360px;
+    width: 360px;
   }
 }
 

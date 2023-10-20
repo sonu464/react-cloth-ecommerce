@@ -1,0 +1,54 @@
+.scrollBarWrapper {
+  display: flex;
+  background-color: #c1c1c1;
+  padding: 2px 10px;
+  gap: 10px;
+}
+
+.ScrollBar {
+  width: 100%;
+  display: flex;
+}
+
+.scrollBarWrapper li {
+  list-style: none;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+}
+
+.scrollBarWrapper li:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .scrollBarWrapper {
+    width: 100%;
+    overflow-x: scroll;
+    padding: 0;
+  }
+
+  /* Hide the main scrollbar */
+  .scrollBarWrapper::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  /* Hide the scrollbar thumb (the draggable part) */
+  .scrollBarWrapper::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  .scrollBarWrapper:hover::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  .ScrollBar {
+    width: 500%;
+  }
+
+  .scrollBarWrapper li {
+    width: max-content;
+  }
+}

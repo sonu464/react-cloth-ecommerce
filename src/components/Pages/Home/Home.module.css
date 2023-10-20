@@ -1,0 +1,99 @@
+.homebg {
+  width: 100%;
+  height: 70vh;
+}
+
+.homebg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 70%;
+}
+
+.homeItem {
+  margin-top: 5%;
+}
+
+.homeItem h1 {
+  padding: 10px 40px;
+  color: red;
+  font-size: 45px;
+}
+
+.homeProducts {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+.homeProductsWrapper {
+  width: 100%;
+  display: flex;
+}
+
+.homeProduct {
+  margin: 0 15px;
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.homeProduct h1 {
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+.productImg {
+  width: 100%;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeProduct img {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .homeProductsWrapper {
+    width: 300%;
+    display: flex;
+  }
+
+  .homeItem h1 {
+    font-size: 34px;
+  }
+
+  .homeProducts {
+    overflow-x: scroll;
+    justify-content: inherit;
+  }
+
+  /* Hide the main scrollbar */
+  .homeProducts::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  /* Hide the scrollbar thumb (the draggable part) */
+  .homeProducts::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  .homeProduct {
+    width: 247px;
+    height: 350px;
+  }
+}
