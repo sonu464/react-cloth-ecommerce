@@ -72,8 +72,12 @@
     display: flex;
   }
 
+  .homebg {
+    margin-bottom: 25%;
+  }
+
   .homeItem {
-    margin-top: 10%;
+    margin-top: 0%;
   }
 
   .homeItem h1 {
