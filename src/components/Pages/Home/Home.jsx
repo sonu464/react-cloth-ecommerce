@@ -20,7 +20,7 @@ function Home() {
       {showCartBox && <Cart />}
       <ScrollBar />
       <div className={classes.homebg}>
-        <img src="/public/homebg1.jpg" alt="" />
+        <img src="/homebg1.jpg" alt="" />
       </div>
       <div className={classes.homeItem}>
         <h1>Best product all over world</h1>
