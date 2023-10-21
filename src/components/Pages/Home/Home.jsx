@@ -3,9 +3,11 @@ import classes from "./Home.module.css";
 import Navbar from "../../Navbar/Navbar";
 import Cart from "../../Cart/Cart";
 import ScrollBar from "./ScrollBar";
+import SearchedItem from "../../SearchedItem/SearchedItem";
 
-function Home() {
+function Home(props) {
   const [showCartBox, setShowCartBox] = useState(false);
+  const [searchItem, setSearchItem] = useState([]);
 
   const cartValueReceivedByApp = (data) => {
     if (data) {
@@ -14,6 +16,7 @@ function Home() {
       setShowCartBox(false);
     }
   };
+
   return (
     <section className={classes.homeWrapper}>
       <Navbar cartValue={cartValueReceivedByApp} />
@@ -47,6 +50,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <SearchedItem searchDataByUser={searchItem} />
     </section>
   );
 }
