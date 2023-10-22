@@ -3,12 +3,16 @@ import { createStore, combineReducers } from "redux";
 const initialState = {
   data: [
     {
-      name: "",
+      full_name: "",
       title: "",
-      imgUrl: "",
-      restaurant: "",
+      profile_pic_url_proxy: "",
+      followers: "",
+      following: "",
+      text: "",
+      url: "",
     },
   ],
+  showUserData: false,
 };
 
 const reducerFun = (state = initialState, action) => {
@@ -16,6 +20,14 @@ const reducerFun = (state = initialState, action) => {
     return {
       ...state,
       data: action.value,
+      showUserData: false,
+    };
+  }
+
+  if (action.type === "show") {
+    return {
+      ...state,
+      showUserData: action.show,
     };
   }
   return state;

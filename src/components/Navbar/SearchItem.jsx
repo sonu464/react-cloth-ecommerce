@@ -17,25 +17,30 @@ function SearchItem(props) {
   const searchSubmitHandler = (event) => {
     event.preventDefault();
 
-    const myHeaders = new Headers();
-    myHeaders.append("apikey", "S49Xn72MOQlDBOnoKDbUllLamipZaCgF");
+    // instagram
 
-    const requestOptions = {
-      method: "GET",
-      redirect: "follow",
-      headers: myHeaders,
-    };
+    async function instaData() {
+      const url = `https://instagram-profile1.p.rapidapi.com/getprofile/${userEnterData}`;
+      const options = {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key":
+            "7f65b4cfb0msh13852740b710562p14a7e4jsnc1abbfd77422",
+          "X-RapidAPI-Host": "instagram-profile1.p.rapidapi.com",
+        },
+      };
 
-    fetch(
-      `https://api.apilayer.com/spoonacular/food/menuItems/search?query=${userEnterData}`,
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((result) => {
-        const fetchedDataByUser = result.menuItems.map((item) => item);
-        dispatch({ type: "update", value: fetchedDataByUser });
-      })
-      .catch((error) => console.log("error", error));
+      try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        // const fetchedDataByUser = result.map((item) => item);
+        dispatch({ type: "update", value: result });
+        dispatch({ type: "show", show: true });
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    instaData();
   };
 
   // show searchHandler

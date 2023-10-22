@@ -1,14 +1,56 @@
+.profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Style the bio */
+.profile-info p:nth-child(5) {
+  font-style: italic;
+}
+
 .searchedItem {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 10vh;
+  background-color: #d9d9d9;
 }
 
 .serchedItemWrapper {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .serchedItemWrapper > h1 {
@@ -16,44 +58,75 @@
   font-size: 40px;
   padding: 0 20px;
 }
-
-.searchItems {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.searchItem {
-  margin: 10px 20px;
-  width: 20%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
+.post {
+  max-width: 600px;
+  margin: 20px auto;
   background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.searchItem img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.searchItemInfo {
-  display: flex;
-  flex-direction: column;
-  margin: 10px 0;
+.postHeader {
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
-.searchItemInfo h1 {
-  color: red;
+.postAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
-.searchItemInfo h2 {
-  font-weight: 100;
+.postHeader h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.postImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.postText {
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* You can add more styles for comments, like buttons, and other post interactions */
+
+@media (max-width: 768px) {
+  .searchedItem {
+    top: 6vh;
+  }
+
+  .profile-container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .profile-picture {
+    width: 100px; /* Decrease the profile picture size */
+    height: 100px;
+    margin-right: 10px; /* Reduce margin for smaller screens */
+  }
+
+  .profile-info h1 {
+    font-size: 20px; /* Reduce font size for headings */
+  }
+
+  .profile-info p {
+    font-size: 12px; /* Reduce font size for paragraphs */
+  }
+
+  .postHeader h3 {
+    font-size: 14px;
+  }
+
+  .profile-header img {
+    width: 25%;
+  }
 }
