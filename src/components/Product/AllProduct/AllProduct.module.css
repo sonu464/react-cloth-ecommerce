@@ -1,0 +1,117 @@
+.allProductContainer {
+  width: 100%;
+  height: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 10vh;
+  background-color: #d9d9d9;
+  padding-top: 7%;
+}
+
+.allProductContainer > h1 {
+  text-align: center;
+  font-size: 40px;
+  padding: 5px 90px;
+  margin-bottom: 3%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.allProductContainer p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.allProductWrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+}
+
+.allProduct {
+  width: 26%;
+  height: 400px;
+  margin: 10px 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.allProduct img {
+  width: 80%;
+  height: 75%;
+}
+
+.allProductInfo {
+  width: 100%;
+  height: 25%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.allProductInfo h1 {
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .allProduct {
+    width: 30%;
+    height: 130px;
+    padding: 20px 5px;
+    margin: 10px 20px;
+  }
+
+  .allProductContainer > h1 {
+    font-size: 20px;
+    padding: 7px 90px;
+  }
+
+  .allProduct img {
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+  }
+
+  .allProductInfo {
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .allProductInfo h1 {
+    font-size: 10px;
+  }
+
+  .allProductContainer {
+    height: auto;
+  }
+
+  .allProductContainer p {
+    display: block;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .gif {
+    width: 15%;
+    margin-top: 20%;
+  }
+}

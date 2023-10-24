@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import classes from "./Home.module.css";
 import Navbar from "../../Navbar/Navbar";
 import Cart from "../../Cart/Cart";
-import ScrollBar from "./ScrollBar";
-import SearchedItem from "../../SearchedItem/SearchedItem";
+// import SearchedItem from "../../SearchedItem/SearchedItem";
+import AllProduct from "../../Product/AllProduct/AllProduct";
+import { useSelector } from "react-redux";
 
 function Home(props) {
   const [showCartBox, setShowCartBox] = useState(false);
-  const [searchItem, setSearchItem] = useState([]);
+  // const [searchItem, setSearchItem] = useState([]);
+  const showAllProduct = useSelector((state) => state.showAllProduct);
 
   const cartValueReceivedByApp = (data) => {
     if (data) {
@@ -21,7 +23,6 @@ function Home(props) {
     <section className={classes.homeWrapper}>
       <Navbar cartValue={cartValueReceivedByApp} />
       {showCartBox && <Cart />}
-      <ScrollBar />
       <div className={classes.homebg}>
         <img src="/homebg1.jpg" alt="" />
       </div>
@@ -50,7 +51,9 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <SearchedItem searchDataByUser={searchItem} />
+
+      {showAllProduct && <AllProduct />}
+      {/* <SearchedItem searchDataByUser={searchItem} /> */}
     </section>
   );
 }

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import classes from "./Navbar.module.css";
 import SearchItem from "./SearchItem";
 import MenuBar from "./MenuBar";
+import ScrollBar from "../Pages/Home/ScrollBar";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
@@ -79,6 +81,9 @@ function Navbar(props) {
 
       <div className={menuClasses}>
         <MenuBar />
+      </div>
+      <div className={classes.scrollBarProduct}>
+        <ScrollBar />
       </div>
     </nav>
   );
