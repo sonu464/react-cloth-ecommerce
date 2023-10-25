@@ -5,6 +5,13 @@
   align-items: center;
   justify-content: center;
   background-color: gainsboro;
+  flex-direction: column;
+}
+
+.loginFormContainer > h1 {
+  font-size: 40px;
+  margin-bottom: 3%;
+  color: #f1f1f1;
 }
 
 .loginForm {

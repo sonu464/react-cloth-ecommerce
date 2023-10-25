@@ -14,6 +14,7 @@ function Login() {
 
   return (
     <div className={classes.loginFormContainer}>
+      <h1> Log In</h1>
       <form onSubmit={loginHandler} className={classes.loginForm}>
         <div className={classes.loginEmail}>
           <label htmlFor="email">Email</label>
