@@ -48,6 +48,7 @@
   padding: 10px 0;
   gap: 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .allProduct img {
@@ -66,6 +67,17 @@
 
 .allProductInfo h1 {
   font-size: 20px;
+}
+
+.ProductInfo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  position: fixed;
+  background-color: #c1c1c1bd;
+  top: 0;
+  padding-top: 7%;
 }
 
 @media (max-width: 600px) {
@@ -102,6 +114,7 @@
 
   .allProductContainer {
     height: auto;
+    top: 9vh;
   }
 
   .allProductContainer p {
