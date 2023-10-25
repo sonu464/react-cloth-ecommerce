@@ -22,3 +22,27 @@
   color: red;
   cursor: pointer;
 }
+
+.logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout > button {
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.logout > button:active {
+  scale: 0.95;
+}

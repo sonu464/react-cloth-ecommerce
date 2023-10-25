@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 function Home(props) {
   const [showCartBox, setShowCartBox] = useState(false);
   // const [searchItem, setSearchItem] = useState([]);
-  const showAllProduct = useSelector((state) => state.showAllProduct);
+  const showAllProduct = useSelector((state) => state.product.showAllProduct);
 
   const cartValueReceivedByApp = (data) => {
     if (data) {

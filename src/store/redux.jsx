@@ -7,7 +7,7 @@ const initialState = {
 };
 
 const productSlice = createSlice({
-  name: "Data",
+  name: "product",
   initialState,
   reducers: {
     update(state) {
@@ -22,9 +22,28 @@ const productSlice = createSlice({
   },
 });
 
+const initialAuthState = {
+  isAuthenticated: false,
+};
+
+const authSlice = createSlice({
+  name: "authentication",
+  initialState: initialAuthState,
+  reducers: {
+    login(state) {
+      state.isAuthenticated = true;
+    },
+    logout(state) {
+      state.isAuthenticated = false;
+    },
+  },
+});
+
 const store = configureStore({
-  reducer: productSlice.reducer,
+  reducer: { auth: authSlice.reducer, product: productSlice.reducer },
 });
 
 export const productAction = productSlice.actions;
+export const authActions = authSlice.actions;
+
 export default store;
