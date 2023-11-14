@@ -14,6 +14,11 @@ function Login() {
 
   return (
     <div className={classes.loginFormContainer}>
+      <div className={classes.sign}>
+        {/* <div className={classes.signUp}>
+          <h1>Sign up</h1>
+        </div> */}
+      </div>
       <h1> Log In</h1>
       <form onSubmit={loginHandler} className={classes.loginForm}>
         <div className={classes.loginEmail}>

@@ -1,4 +1,5 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import cartSlice from "./cart-slice";
 
 const initialState = {
   data: [],
@@ -40,7 +41,11 @@ const authSlice = createSlice({
 });
 
 const store = configureStore({
-  reducer: { auth: authSlice.reducer, product: productSlice.reducer },
+  reducer: {
+    auth: authSlice.reducer,
+    product: productSlice.reducer,
+    cart: cartSlice.reducer,
+  },
 });
 
 export const productAction = productSlice.actions;
